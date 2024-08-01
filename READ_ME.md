@@ -55,4 +55,8 @@ password: xxxxx
 
 sudo docker push rajapvk23/fet:x1
 
+### server_deploy (take ec2)
+
+
+
 
