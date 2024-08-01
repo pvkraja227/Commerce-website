@@ -1,0 +1,27 @@
+## server_build:
+
+git clone https://github.com/pvkraja227/Commerce-website.git
+
+cd Commerce-website/project-files/
+
+sudo docker login
+
+sudo chown ubuntu build.sh
+sudo chmod 744 build.sh
+
+./build.sh
+
+(check DockerHub)
+
+## server_deploy:
+
+git clone https://github.com/pvkraja227/Commerce-website.git
+
+cd Commerce-website/project-files/
+
+sudo chown ubuntu deploy.sh
+sudo chmod 744 deploy.sh
+
+./deploy.sh
+
+kubectl get pods -n react-nginx (previous pods got deleted and new pods started)
