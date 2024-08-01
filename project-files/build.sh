@@ -1,6 +1,6 @@
 #! /bin/bash
-cd Gold_Site_Ecommerce
+cd Commerce-website/project-files
 sudo git pull
-sudo docker build -t raja -f golddockerfile .
-sudo docker tag raja:latest rajapvk23/dev:h1
-sudo docker push rajapvk23/dev:h1
+sudo docker build -t react-nginx -f golddockerfile .
+sudo docker tag react-nginx:latest rajapvk23/dev:x1
+sudo docker push rajapvk23/dev:x1
