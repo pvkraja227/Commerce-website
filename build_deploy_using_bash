@@ -4,7 +4,7 @@ git clone https://github.com/pvkraja227/Commerce-website.git
 
 cd Commerce-website/project-files/
 
-sudo docker login
+sudo docker login (provide details)
 
 sudo chown ubuntu build.sh
 sudo chmod 744 build.sh
