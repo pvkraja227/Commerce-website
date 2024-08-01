@@ -1,3 +1,5 @@
+### server_build (take ec2)
+
 cat /etc/os-release
 
 sudo apt update
