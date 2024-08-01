@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: react
-        image: sagarkakkala385/react-nginx
+        image: rajapvk23/fet:x1
         ports:
         - containerPort: 80
