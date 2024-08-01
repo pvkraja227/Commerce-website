@@ -57,6 +57,35 @@ sudo docker push rajapvk23/fet:x1
 
 ### server_deploy (take ec2)
 
+sudo apt update /
+sudo apt install software-properties-common /
+sudo add-apt-repository --yes --update ppa:ansible/ansible /
+sudo apt install ansible
+
+sudo apt update
+sudo snap install microk8s --classic
+microk8s status --wait-ready
+(copy sudo usermod -a -G microk8s ubuntu
+sudo su - root
+sudo su - ubuntu
+microk8s kubectl get all --all-namespaces
+alias kubectl='microk8s kubectl'
+kubectl get nodes (1)
+kubectl create ns react-nginx
+
+git clone https://github.com/pvkraja227/Commerce-website.git
+cd Commerce-website/
+cd project-files/
+kubectl apply -f deployment.yaml
+kubectl apply -f service.yaml
+kubectl apply -f ingress.yaml
+
+kubectl get pods -n react-nginx (2)
+kubectl get svc -n react-nginx (ClusterIP)
+curl http://ClusterIP:80
+kubectl get ingress -n react-nginx
+curl http://hari-dev.shop/
+
 
 
 
