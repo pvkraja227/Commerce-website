@@ -24,14 +24,14 @@ sudo vi /etc/ansible/hosts / (add [webservers] --> below add server_deploy priva
 
 ansible all -m ping (check)
 
-sudo vi build.yml / (copy project-files/build.yml and paste)
+git clone 
 
-ansible-playbook build.yml --syntax-check (syntax check)
+cd Commerce-website/project-files/
+
+ansible-playbook build.yml --syntax-check (syntax check, if error: ansible-config init --disabled -t all > ansible.cfg)
 
 ansible-playbook build.yml (runs in server_build, new image created and pushed to DockerHub)
 
-sudo vi deploy.yml / (copy project-files/deploy.yml and paste)
-
-ansible-playbook deploy.yml --syntax-check (syntax check)
+ansible-playbook deploy.yml --syntax-check (syntax check, if error: ansible-config init --disabled -t all > ansible.cfg)
 
 ansible-playbook deploy.yml (runs in server_deploy, new pods started)
