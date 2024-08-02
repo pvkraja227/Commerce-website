@@ -7,9 +7,7 @@ pipeline {
                 script {
                     // Execute Ansible playbook on Build Server
                     sh "ssh ubuntu@172.31.3.17 'ansible-playbook /home/ubuntu/Commerce-website/project-files/build.yml'"
-                
-                    
-                    }
+                }
             }
         }
         
