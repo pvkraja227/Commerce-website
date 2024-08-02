@@ -23,3 +23,15 @@ sudo vi /etc/ansible/ansible.cfg / (add inventory=/etc/ansible/hosts) / ansible-
 sudo vi /etc/ansible/hosts / (add [webservers] --> below add server_deploy privateIP)
 
 ansible all -m ping (check)
+
+sudo vi build.yml / (copy project-files/build.yml and paste)
+
+ansible-playbook build.yml --syntax-check (syntax check)
+
+ansible-playbook build.yml (runs in server_build, new image created and pushed to DockerHub)
+
+sudo vi deploy.yml / (copy project-files/deploy.yml and paste)
+
+ansible-playbook deploy.yml --syntax-check (syntax check)
+
+ansible-playbook deploy.yml (runs in server_deploy, new pods started)
