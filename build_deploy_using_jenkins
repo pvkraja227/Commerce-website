@@ -1,10 +1,26 @@
-### server_jenkins (ec2)
+### server_jenkins
+
+(SSH CONFIGURATION)
+
+sudo su - ubuntu / ssh-keygen / cd .ssh / cat id_ed25519.pub (copy public key-pair) / sudo su - root / sudo su - ubuntu
+
+### server_build
+
+sudo su - ubuntu / cd .ssh / vi authorized_keys (paste below the key-pair already existing) / sudo su - root / sudo su - ubuntu
+
+### server_jenkins:
+
+ssh -i id_ed25519 ubuntu@privateIP of server_build (check, remotely accessed server_build, SSH Connection Configured) / exit)
+
+### (Install Java)
 
 sudo apt update
 
 sudo apt install fontconfig openjdk-17-jre
 
 java -version
+
+### (Install Jenkins)
 
 sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
   https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
@@ -26,13 +42,6 @@ sudo cat /var/lib/jenkins/.... copy pwd and paste in dashboard)
 
 (Dashboard - Install Plugins)
 
-### SSH Connection
+### Jenkins Dashboard
 
-sudo su - ubuntu
-
-ssh-keygen / cd .ssh / cat 
-
-
-
-
-
+Item: 3 / pipeline / pipeline scm / git / url: / ... / apply --> buildnow
