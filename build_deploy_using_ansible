@@ -24,7 +24,7 @@ sudo vi /etc/ansible/hosts / (add [webservers] --> below add server_deploy priva
 
 ansible all -m ping (check)
 
-git clone 
+git clone https://github.com/pvkraja227/Commerce-website.git
 
 cd Commerce-website/project-files/
 
