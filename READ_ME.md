@@ -1,10 +1,10 @@
-# server_build (take ec2)
+### (server_build)
 
 cat /etc/os-release
 
 sudo apt update
 
-# Docker install - 3 steps
+(Docker install - 3 steps)
 
 1. for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
 2. 
@@ -26,10 +26,6 @@ sudo apt-get update
 3. sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 docker --version
-
-sudo apt install git
-
-git --version
 
 git clone https://github.com/pvkraja227/Commerce-website.git
 
@@ -56,11 +52,11 @@ password: xxxxx (login succeeded)
 
 sudo docker push rajapvk23/fet:x1
 
-### server_deploy (take ec2)
+### (server_deploy)
 
 sudo apt update
 
-### Install Microk8s
+(Install Microk8s)
 
 sudo snap install microk8s --classic
 
