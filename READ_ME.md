@@ -40,7 +40,7 @@ sudo docker images
 
 sudo docker run -d --name react-nginx-container -p 80:80 react-nginx
 
-sudo docker exec -it react-nginx /bin/sh
+sudo docker exec -it react-nginx-container /bin/sh
 
 ls -l (check)
 
@@ -51,7 +51,7 @@ sudo docker tag react-nginx:latest rajapvk23/fet:x1
 sudo docker login
 
 username: xxxxx
-password: xxxxx
+password: xxxxx (login succeeded)
 
 sudo docker push rajapvk23/fet:x1
 
