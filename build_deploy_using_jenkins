@@ -45,3 +45,7 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword .... copy pwd and paste i
 ### Jenkins Dashboard
 
 Item: 3 / pipeline / pipeline scm / git / url: / ... / apply --> buildnow
+
+optional: GitHub hook trigger for GITScm polling / Github: Settings / Webhook / "publicIP:8080/github-webhook/" / application / json / create webhook
+
+
