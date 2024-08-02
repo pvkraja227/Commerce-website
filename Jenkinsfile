@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     // Execute Ansible playbook on Build Server
-                    sh "ssh ubuntu@172.31.3.17 'ansible-playbook /home/ubuntu/Commerce-website/project-files/build.yml'"
+                    sh "ssh ubuntu@172.31.3.17 'ansible-config init --disabled -t all > ansible.cfg && ansible-playbook /home/ubuntu/Commerce-website/project-files/build.yml'"
                 }
             }
         }
@@ -15,7 +15,7 @@ pipeline {
             steps {
                 script {
                     // Execute deployment playbook on Deploy Server
-                    sh "ssh ubuntu@172.31.3.17 'ansible-playbook /home/ubuntu/Commerce-website/project-files/deploy.yml'"
+                    sh "ssh ubuntu@172.31.3.17 'ansible-config init --disabled -t all > ansible.cfg && ansible-playbook /home/ubuntu/Commerce-website/project-files/deploy.yml'"
                 }
             }
         }
