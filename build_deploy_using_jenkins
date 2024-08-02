@@ -38,7 +38,7 @@ sudo systemctl start jenkins
 
 (chrome: publicIP:8080 - Dashboard)
 
-sudo cat /var/lib/jenkins/.... copy pwd and paste in dashboard)
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword .... copy pwd and paste in dashboard)
 
 (Dashboard - Install Plugins)
 
