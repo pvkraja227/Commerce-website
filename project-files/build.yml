@@ -1,6 +1,6 @@
 ---
 - name: playbook to build our docker image
-  hosts: localhost
+  hosts: 172.31.3.17
   tasks:
     - name: remove existing bashscripts directory and ignore task if bashscripts folder is not there
       ansible.builtin.shell:
