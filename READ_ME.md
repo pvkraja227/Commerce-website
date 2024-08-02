@@ -87,6 +87,12 @@ kubectl apply -f deployment.yaml
 
 kubectl apply -f service.yaml
 
+kubectl get all --all-namespaces (no ingress controller)
+
+microk8s enable ingress
+
+kubectl get all --all-namespaces (ingress controller pod is up)
+
 kubectl apply -f ingress.yaml
 
 kubectl get pods -n react-nginx (2)
