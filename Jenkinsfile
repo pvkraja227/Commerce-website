@@ -1,7 +1,6 @@
 ---
 pipeline {
     agent any
-    
     stages {
         stage('Build Docker images on Build Server') {
             steps {
