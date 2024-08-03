@@ -1,17 +1,5 @@
 ### server_jenkins
 
-(SSH CONFIGURATION)
-
-sudo su - ubuntu / ssh-keygen / cd .ssh / cat id_ed25519.pub (copy public key-pair) / sudo su - root / sudo su - ubuntu
-
-### server_build
-
-sudo su - ubuntu / cd .ssh / vi authorized_keys (paste below the key-pair already existing) / sudo su - root / sudo su - ubuntu
-
-### server_jenkins:
-
-ssh -i id_ed25519 ubuntu@privateIP of server_build (check, remotely accessed server_build, SSH Connection Configured) / exit)
-
 ### (Install Java)
 
 sudo apt update
@@ -41,6 +29,18 @@ sudo systemctl start jenkins
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword .... copy pwd and paste in dashboard)
 
 (Dashboard - Install Plugins)
+
+(SSH CONFIGURATION)
+
+sudo su - jenkins / ssh-keygen / cd /var/lib/jenkins/.ssh / cat id_ed25519.pub (copy public key-pair) / sudo su - root / sudo su - ubuntu
+
+### server_build
+
+sudo su - ubuntu / cd .ssh / vi authorized_keys (paste below the key-pair already existing) / sudo su - root / sudo su - ubuntu
+
+### server_jenkins:
+
+ssh -i id_ed25519 ubuntu@privateIP of server_build (check, remotely accessed server_build, SSH Connection Configured) / exit)
 
 ### Jenkins Dashboard
 
