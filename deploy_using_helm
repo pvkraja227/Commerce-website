@@ -11,6 +11,6 @@ chmod 700 get_helm.sh
 helm version (check)
 
 helm create react-helm / cd react-helm
-echo "# Helm-Charts-PVK >> README.md"\n
+echo "# Helm-Charts-PVK >> README.md"
 git init
 
