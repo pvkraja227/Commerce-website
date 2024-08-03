@@ -11,4 +11,16 @@ helm version (check)
 helm create react-helm / cd react-helm
 echo "# Helm-Charts-PVK >> README.md"
 git init
+git add .
+git commit -m 'd1'
+git branch -M main
+git remote add origin https://github.com/pvkraja227/React_Helm_Charts.git
+git push -u origin main
+(username: xxxx / password: xxxx token)
 
+(IDE - Visual Studio Code)
+
+git clone https://github.com/pvkraja227/React_Helm_Charts.git
+cd React_Helm_Charts
+(values.yaml - change the values according to our deployment/service/ingress and add namespace: react-nginx)
+(since we created namespace: react-nginx --> add namespace: {{ .Values.namespace }} in templates/ deploy n service n ingress)
